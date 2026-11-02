@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Psychology Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Class Psychology</h1>
+        <p>Sinf psixologik muhitini o‘rganish platformasi</p>
+    </header>
+
+    <main>
+        <section id="welcome" class="box">
+            <div class="icon">🌸</div>
+            <h2>Xush kelibsiz!</h2>
+            <p>
+                Ushbu test sinfdagi do‘stlik, hamkorlik,
+                o‘zaro hurmat va psixologik muhitni o‘rganishga yordam beradi.
+            </p>
+            <p class="note">Test anonim tarzda o‘tkaziladi.</p>
+            <button onclick="startTest()">Testni boshlash</button>
+        </section>
+
+        <section id="quiz" class="box hidden">
+            <div class="progress-info">
+                <span id="questionNumber"></span>
+                <span id="progressPercent"></span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <h2 id="questionText"></h2>
+            <div id="answers"></div>
+
+            <button id="nextButton" onclick="nextQuestion()" disabled>
+                Keyingi savol
+            </button>
+        </section>
+
+        <section id="result" class="box hidden">
+            <div class="icon">🎉</div>
+            <h2>Test yakunlandi!</h2>
+            <p id="resultText"></p>
+            <div class="score" id="score"></div>
+            <p id="resultDescription"></p>
+            <button onclick="saveResult()">Natijani saqlash</button>
+            <button class="secondary" onclick="restartTest()">Qayta ishlash</button>
+        </section>
+
+        <section id="statistics" class="box hidden">
+            <h2>📊 Umumiy sinf natijalari</h2>
+            <p id="totalStudents"></p>
+            <div id="statisticsContent"></div>
+            <button onclick="showWelcome()">Bosh sahifa</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Class Psychology Test © 2026</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
